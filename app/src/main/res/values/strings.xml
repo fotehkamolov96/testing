@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Dovtalab</string>
+    <string name="admin">Дарбораи ман</string>
+    <string name="repost">Даъвати дустон</string>
+    <string name="liked">Бахогузори</string>
+    <string name="dovtalab">Dovtalab</string>
+
+    <string name="exit">Баромад</string>
+    <string name="start">Оғоз</string>
+    <string name="text2">Мачмуаи саволу тестхо зиёда аз 10 хазор. Барномаро санчед ва дониши худро барои тайёри ба имтиҳонҳои дохилшави омода созед.</string>
+    <string name="todo">TODO</string>
+
+
+    <string name="last_score">Last score</string>
+    <string name="highscore">Highscore</string>
+    <string name="next">Навбатӣ</string>
+</resources>

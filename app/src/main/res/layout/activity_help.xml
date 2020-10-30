@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Help">
+
+    <!--ekran-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0" />
+    <!--ekran-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.97" />
+    <!--ekran-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineQuestionLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+    <!--ekran-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineQuestionRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+    <!--ekran-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".98" />
+    <!--ekran-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+    <!--ekran-->
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/helpdesign"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottomStats2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints"></View>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="93dp"
+        android:layout_height="84dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ava"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottomStats2"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineQuestionRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineQuestionLeft"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottomStats2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottomStats1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22" />
+
+    <TextView
+        android:id="@+id/titleWindow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Довталаб"
+        android:fontFamily="@font/times"
+        android:textSize="26sp"
+        android:textColor="@color/color3"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottomStats3"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineQuestionRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineQuestionLeft"
+        app:layout_constraintTop_toTopOf="@+id/guidelineBottomStats1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottomStats3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottomStats50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <TextView
+        android:id="@+id/massageWindow"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/times"
+        android:gravity="center_horizontal|fill_horizontal"
+        android:text=" Барномаи Довталаб яке аз барномахое илми ва мактаби мебошад ки барои баланд намудани сатхи дониши шумо ва дохил шудан ба Донишгохои Олии Точикистон ердам мерасонад. Довталаб ба мисли Маркази миллии тести кор мекунад ва барнома зиеда аз 10 хазор савол аз фанхои мактаби дар бар гирифтааст. Саволхо бо забони точики ва Руси сохта шудаанд. Шумо метавонед тарики Довталаб дониши худро санченд ва аз натичахои гирифтаи худ метавонед фахмед ки дар кадом фанхо шумо заиф хастед. Довталаб ба шумо бурдборихо ва комебихо дар чодаи илматон хохон хаст. Муваффакият ба шумо!"
+        android:textSize="17sp"
+        android:textColor="@color/color5"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottomStats60"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineBottomStats3"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottomStats60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.92" />
+</androidx.constraintlayout.widget.ConstraintLayout>

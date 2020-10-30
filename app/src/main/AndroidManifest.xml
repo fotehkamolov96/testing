@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.dt">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".Russian"></activity>
+        <activity android:name=".English" />
+        <activity android:name=".Endmain" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Первый экран -->
+        <activity
+            android:name=".Main1"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity" /> <!-- Второй экран -->
+        <activity
+            android:name=".Main2"
+            android:parentActivityName=".Main1"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" /> <!-- Предметы и их стиль -->
+        <activity
+            android:name=".Zabon"
+            android:parentActivityName=".Main2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Biologiya"
+            android:parentActivityName=".Main2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Ximiya"
+            android:parentActivityName=".Main2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Fizika"
+            android:parentActivityName=".Main2"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Hukuk"
+            android:parentActivityName=".Main2"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Tarikh"
+            android:parentActivityName=".Main2"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Geogi"
+            android:parentActivityName=".Main2"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Informatica"
+            android:parentActivityName=".Main2"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" /> <!-- верх-кнопки -->
+        <activity
+            android:name=".Help"
+            android:parentActivityName=".Main2"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Like"
+            android:parentActivityName=".Main2"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Contact"
+            android:parentActivityName=".Main2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+    </application>
+
+</manifest>
