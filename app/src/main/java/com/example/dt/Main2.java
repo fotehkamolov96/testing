@@ -5,9 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -19,6 +16,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.List;
+import java.util.concurrent.Executors;
 
 public class Main2 extends AppCompatActivity {
 
@@ -36,7 +36,6 @@ public class Main2 extends AppCompatActivity {
         listView = findViewById(R.id.listView);
             MyAdapter adapter = new MyAdapter(this, mTitle, mDescription, images);
                 listView.setAdapter(adapter);
-
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -48,13 +47,13 @@ public class Main2 extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), English.class);
                     startActivity(intent);
                 }
+    }
+        }
+
+        );
 
 
-
-
-
-            }
-        });
+        loadQuestions(getApplicationContext());
     }
 
     class MyAdapter extends ArrayAdapter<String> {
@@ -92,19 +91,23 @@ public class Main2 extends AppCompatActivity {
 
             return row;
         }
-
-
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main2menu, menu);
-        return true;
+
+
+    private void loadQuestions(final Context myContext) {
+        try {
+            Executors.newSingleThreadScheduledExecutor().execute(new Runnable() {
+                @Override
+                public void run() {
+                    final List<Question> questions = new QuestionCollector().fetchQuestions(myContext);
+                    QuizDatabase.getAppInstance(myContext).clearAllTables();
+                    QuizDatabase.getAppInstance(myContext).questionDao().insertAll(questions);
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        return super.onOptionsItemSelected(item);
-    }
 }
