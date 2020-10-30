@@ -17,15 +17,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // This is Splash Screen
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                Intent mainIntent = new Intent(MainActivity.this, Main1.class);
-//                startActivity(mainIntent);
-//            }
-//        }, SPLASH_TIME_OUT);
-
         loadQuestions(getApplicationContext());
         startTimer.start();
 
@@ -36,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private CountDownTimer startTimer = new CountDownTimer(WAIT_VALUE, 1000) {
         @Override
         public void onTick(long millisUntilFinished) {
-            //nothing to do
+
         }
 
         @Override

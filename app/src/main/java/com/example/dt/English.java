@@ -9,6 +9,6 @@ public class English extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_russian);
+        setContentView(R.layout.activity_english);
     }
 }
